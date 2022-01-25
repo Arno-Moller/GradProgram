@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title>Pic to Pen</mat-card-title>
+  <mat-card-subtitle>Upload Image To Convert To Text</mat-card-subtitle>
+  <mat-card-actions align="start">
+
+    <input class="form-control" type="file" (change)="onChange($event)">
+    <button mat-raised-button color="accent" (click)="onUpload()">Upload</button>
+
+  </mat-card-actions>
+</mat-card>
+
+<!--Flag variable is used here-->
+<div class="container" *ngIf="loading">
+  <h3>Loading ...</h3>
+</div>
